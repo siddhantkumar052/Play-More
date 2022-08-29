@@ -1,0 +1,67 @@
+{{#if userLoggedIn}}
+
+  <div class="overlay-right d-flex">
+    <form method="POST" action="/admin/logout" class="form1">
+      <button id="logout-button" class="btn btn-primary" type="submit">Logout</button>
+    </form>
+    <div>
+      <a href="/playground/add" class="btn btn-primary playground_add_button">AddPlayground</a>
+    </div>
+  </div>
+
+{{/if}}
+
+<form method="POST" class="new-post-form mt-2" action="/search">
+  <div class="input-group mt-3">
+
+    <div class="form-outline">
+      <input type="search" id="search" name="search" class="form-control" />
+      {{!-- <label class="form-label" for="form1">Search</label> --}}
+    </div>
+    <button class="btn btn-primary">Search
+      {{!-- <i class="fas fa-search"></i> --}}
+    </button>
+
+  </div>
+</form>
+
+<section id="playgrounds" class="my-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Playgrounds</h1>
+      </div>
+    </div>
+    <div class="row">
+      {{#if playgrounds.length}}
+      {{#each playgrounds}}
+      <div class="col-md-4 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <img src="{{this.image}}" class="card-img-top" alt="...">
+            <h5 class="card-title">{{this.playgroundName}}{{this.image}}</h5>
+            <p class="card-text">{{this.location}}</p>
+            <a href="/playground/{{this._id}}" class="btn btn-primary">View</a>
+            {{!-- {{#if ../userLoggedIn}} --}}
+            <a href="/playground/{{this._id}}/edit" class="btn btn-primary">Edit</a>
+
+            {{!-- <a class="btn btn-primary" href="/playground/{{this._id}}/delete" aria-disabled="true">Delete</a> --}}
+
+            <form method="POST" action="/playground/{{this._id}}/delete">
+              <button  class="btn btn-primary" type="submit">Delete</button>
+            </form>
+            {{!-- {{/if}} --}}
+          </div>
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="col-md-12">
+        <h6 class="text-center">No playground found</h6>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+
+
+</section>

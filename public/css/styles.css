@@ -1,0 +1,328 @@
+body {
+    font-family: Verdana, monospace;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.playgrounds-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+
+}
+
+.home-container {
+    margin: 20px 0;
+}
+
+/* home page */
+.filter-search {
+    margin-left: 15px;
+}
+
+.homeform {
+    width: 100%;
+}
+
+.home2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .card{
+    margin : 5px !important;
+    width: 400px !important;
+    height: 425px !important;
+} */
+
+
+.poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3mm;
+}
+
+.home_buttons {
+    margin-top: 15%;
+}
+
+.home_button_ul {
+    height: 55px;
+}
+
+.home_button_a {
+    width: 50%;
+    height: 100%;
+    font-size: larger;
+    padding: 12px;
+    margin-left: 20%;
+}
+
+.admin_header {
+    text-align: center;
+    font-size: -webkit-xxx-large;
+}
+
+.admin_form_text {
+    font-size: x-large;
+    margin-top: 30px;
+}
+
+.full-width-input {
+    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+}
+
+.admin_button_login {
+    margin-top: 25px;
+    margin-left: 40%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #04224e !important;
+    border-color: #0d6efd;
+}
+
+.admin_form {
+    width: 23rem;
+    margin-left: 15%;
+    margin-top: 20%;
+}
+
+.home_header {
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.home_body {
+    font-size: medium;
+}
+
+.login_header {
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.form-label {
+    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+}
+
+.login_form_text {
+    font-size: x-large;
+    margin-top: 30px;
+}
+
+.login_radio {
+    padding-left: 15%;
+}
+
+.form-check-label {
+    font-size: large;
+}
+
+.login_button {
+    margin-top: 25px;
+    margin-left: 40%;
+}
+
+.login_text {
+    margin-left: 5%;
+}
+
+.link-info {
+    color: #134b56 !important;
+}
+
+.login_form {
+    width: 23rem;
+    margin-left: 15%;
+    margin-top: 15%;
+}
+
+.signup_form {
+    width: 23rem;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.signup_form_text {
+    font-size: x-large;
+    margin-top: 30px;
+}
+
+.signup_header {
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.signup_button {
+    margin-top: 25px;
+    margin-left: 40%;
+}
+
+.card-playground {
+    width: 500px;
+    height: 500px;
+    padding: 25px;
+    border-color: #04224e;
+}
+
+.playground_button {
+    width: fit-content;
+    margin-left: 5px;
+}
+
+#main div {
+    /* IE 10 */
+    flex: 1;
+}
+
+.playground_add_button {
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.playground_logout_button {
+    margin-top: 5px;
+    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.delete_button {
+    margin-top: -65px;
+    /* margin-left: -51px; */
+    margin-right: 119px;
+}
+
+.card-img-top {
+    border-color: #04224e;
+    border-style: inset;
+}
+
+.add_playground {
+    text-align: center;
+}
+
+.add_form_text {
+    font-size: larger;
+    margin-top: 30px;
+}
+
+.add-form {
+    padding: 30px;
+}
+
+.add_button {
+    margin-top: 15px;
+}
+
+.full-add-width-input {
+    margin-top: 5px;
+    width: 50%;
+    height: 40px;
+}
+
+.view-card {
+    width: 100%;
+}
+
+.view-card-title {
+    font-size: x-large;
+}
+
+.view-card-text {
+    margin-top: 55px !important;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.form-outline {
+    margin-left: 50px;
+}
+.overlay-right{
+    margin-left: 50px;
+}
+.form1{
+    margin-top: 6px;
+}
+.main-block {
+	max-width: 70%;
+	padding: 20px;
+	margin: auto;
+	border-radius: 5px;
+	border: solid 1px #ccc;
+	box-shadow: 1px 2px 5px rgb(0 0 0 / 31%);
+	background: #ebebeb;
+    margin: auto;
+	justify-content: center;
+}
+.new-post-form1 {
+	display: block;
+	min-height: 3em; 
+    margin: auto;
+	justify-content: center;
+    text-align: center;
+}
+
+.button1 {
+	width: 100%;
+	padding: 10px 0;
+	margin: 10px auto;
+	border-radius: 5px;
+	border: none;
+	background: #1c87c9;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.questions{
+    font-size: 20px;
+}

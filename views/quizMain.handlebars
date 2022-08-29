@@ -1,0 +1,52 @@
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-black">
+        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+          <form class="homeform" id="login-form" method="POST" action="/user/login">
+            <h3 class="fw-normal mb-3 pb-3 login_header" style="letter-spacing: 1px;">Sports Trivia</h3>
+
+            <div class="home_buttons">
+              <div class="home_button_ul ">
+                <a href="/quiz/game1" class="btn btn-primary home_button_a">Quiz 1</a>
+              </div>
+              <div class="home_button_ul mt-2">
+                <a href="/quiz/game2" class="btn btn-primary home_button_a">Quiz 2</a>
+              </div>
+              <div class="home_button_ul mt-2">
+                <a href="/quiz/game3" class="btn btn-primary home_button_a">Quiz 3</a>
+              </div>
+              <div class="home_button_ul mt-2">
+                <a href="/quiz/game4" class="btn btn-primary home_button_a">Quiz 4</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="../public/images/quizimage.jpg" alt="Login image" class="w-100 vh-100"
+          style="object-fit: cover; object-position: left;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  function displayRadioValue() {
+    document.getElementById("result").innerHTML = "";
+    var ele = document.getElementsByTagName('input');
+
+    for (i = 0; i < ele.length; i++) {
+
+      if (ele[i].type = "radio") {
+
+        if (ele[i].checked)
+          document.getElementById("result").innerHTML
+            += ele[i].name + " Value: "
+            + ele[i].value + "<br>";
+      }
+    }
+  }
+</script>

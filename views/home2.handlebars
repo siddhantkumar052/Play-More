@@ -1,0 +1,65 @@
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-black">
+
+
+        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+          <form class="homeform" id="login-form" method="POST" action="/user/login">
+
+            <h3 class="fw-normal mb-3 pb-3 home_header">PLAY MORE</h3>
+
+            <p class="home_body">This website will act as a booking system for playgrounds. It
+              will also provide option to host a match if people want to play a
+              particular sport together. In this website users can create a post
+              of their event. They can select a particular sport which they are
+              going to play/host. They can also write reviews on playgrounds
+              which are already existing. The purpose of application is to allow
+              users to find nearby events / matches which they would like to
+              join. If they have a location, they can host the game to play.</p>
+
+            <div class="home_buttons">
+              
+                <div class="home_button_ul">
+                  <a href="/admin" class="btn btn-primary home_button_a">Admin</a>
+
+                </div>
+                
+                <div class="home_button_ul mt-2"><a href="/user/login" class="btn btn-primary home_button_a">Login</a></div>
+            </div>
+
+
+            {{#if error}}
+            <div class="alert alert-danger" role="alert">
+              {{error}}
+            </div>
+            {{/if}}
+
+          </form>
+
+        </div>
+
+      </div>
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="../public/images/image1.jpg" alt="Login image" class="w-100 vh-100"
+          style="object-fit: cover; object-position: left;" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  function displayRadioValue() {
+    document.getElementById("result").innerHTML =
+      ""; var ele = document.getElementsByTagName('input'); for (i = 0; i <
+        ele.length; i++) {
+      if (ele[i].type = "radio") {
+        if (ele[i].checked)
+          document.getElementById("result").innerHTML += ele[i].name + " Value: " +
+            ele[i].value + "<br>";
+      }
+    }
+  }
+</script>

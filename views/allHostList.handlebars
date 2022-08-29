@@ -1,0 +1,48 @@
+
+<div class="vh-100">
+  <div class="container-fluid">
+
+
+    <section id="hosts" class="my-4">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Sports Event Data</h1>
+          </div>
+        </div>
+        <div class="error-container">
+          {{#if error}}
+          <h4>{{error}}</h4>
+          {{/if}}
+        </div>
+        <div class="row">
+          {{#if Host.length}}
+          {{#each Host}}
+          <div class="col-md-3 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <img src="{{this.image}}" class="card-img-top" alt="...">
+                <h5 class="card-title">{{this.playgroundName}}</h5>
+                <p class="card-text">{{this.location}}</p>
+
+
+                <a href="/host/allhostlist/{{this._id}}" class="btn btn-primary">View</a>
+                
+              </div>
+            </div>
+          </div>
+          {{/each}}
+          {{else}}
+          <div class="col-md-12">
+            <h6 class="text-center">No playground found</h6>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </section>
+
+   
+
+  </div>
+</div>

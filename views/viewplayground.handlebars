@@ -1,0 +1,85 @@
+<a href="/home" class="btn btn-primary">Home</a>
+<section id="playground-container" class="my-4">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card view-card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                <img style="width: 100%; height:400px;" src="{{playgrounds.image}}"
+                                    class="img-fluid rounded" alt="...">
+                            </div>
+                            <div class="col-md-8 col-sm-12">
+                                <h5 class="card-title view-card-title">{{playgrounds.playgroundName}}</h5>
+                                <p class="card-text view-card-text"><b>Location: </b>{{playgrounds.location}}</p>
+                                <p class="card-text view-card-text"><b>Time: </b>{{playgrounds.schedule}}</p>
+                                <p class="card-text view-card-text"><b>Size: </b>{{playgrounds.playgroundSize}}</p>
+                                <p class="card-text view-card-text"><b>Amenities: </b>
+                                    {{#each playgrounds.amenities}}
+                                    <span class="badge bg-info">{{this}}</span>
+                                    {{/each}}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="playground-comments">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">Comments</h3>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form action="/comment/{{playgrounds._id}}/add" method="POST">
+                            <div class="form-group">
+                                <label for="comment">Comment</label>
+                                <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group">
+                            {{#each comments}}
+                            <li class="list-group-item d-flex align-items-baseline justify-content-between">
+                                <p class="card-text">{{this.comment}}</p>
+                                <div class="align-items-baseline d-flex">
+                                    <span class="align-items-baseline d-flex">
+                                        {{this.likes}}
+                                        <a href="/playground/{{this.playgroundId}}/comment/{{this._id}}/like"
+                                            class="btn"><i class="fa-solid fa-thumbs-up"></i></a>
+                                    </span>
+                                    <span class="align-items-baseline d-flex">
+                                        {{this.dislikes}}
+                                        <a href="/playground/{{this.playgroundId}}/comment/{{this._id}}/dislike"
+                                            class="btn"><i class="fa-solid fa-thumbs-down"></i></a>
+                                    </span>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

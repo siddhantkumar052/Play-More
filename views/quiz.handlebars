@@ -1,0 +1,34 @@
+<div class="main-block mt-5" >
+
+  <form id="quiz" name="quiz" class="new-post-form1">
+    <h1>Quiz 1</h1>
+    <p class="questions">Who among the following was known as Flying Sikh?</p>
+    <input type="radio" id="mc1" name="question1" value="Milkha Singh"> Milkha Singh<br>
+    <input type="radio" id="mc11" name="question1" value="Yuvaraj Singh"> Yuvaraj Singh<br>
+    <p class="questions">How many medals did China win at the Beijing Olympics?</p>
+    <input type="radio" id="mc2" name="question2" value="100"> 100<br>
+    <input type="radio" id="mc22" name="question2" value="70"> 70<br>
+    <p class="questions">Which boxer fought against Muhammad Ali and won?</p>
+    <input type="radio" id="mc3" name="question3" value="Joe Frazier"> Joe Frazier<br>
+    <input type="radio" id="mc33" name="question3" value="Mike Tyson"> Mike Tyson<br>
+    <input id="button" type="button" value="Submit" class="button1 mt-4" onclick="check();">
+  </form>
+  <div id="after_submit">
+    <p id="number_correct"></p>
+    <p id="message"></p>
+  </div>
+</div>
+<script>function check() {
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var correct = 0;
+    if (question1 == "Milkha Singh") { correct++; }
+    if (question2 == "100") { correct++; }
+    if (question3 == "Joe Frazier") { correct++; }
+    var score;
+    document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = [score];
+    document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+  }
+</script>

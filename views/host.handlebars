@@ -1,0 +1,42 @@
+{{> hostheader}}
+
+<div class="vh-100">
+  <div class="container-fluid">
+
+
+    <section id="playgrounds" class="my-4">
+      <div class="container">
+
+        <div class="me-mb-3">
+          <a href="/host/hostlist" class="btn btn-primary">Show my Host Data</a>
+
+        </div>
+
+        <h2 class="text-center">Select Playgrounds</h2>
+        <div class="row">
+          {{#if playgrounds.length}}
+          {{#each playgrounds}}
+          <div class="col-md-3 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <img src="{{image}}" class="card-img-top" alt="...">
+                <h5 class="card-title">{{this.playgroundName}}</h5>
+                <p class="card-text">{{this.location}}</p>
+
+                <a href="/host/playground/{{this._id}}" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+          {{else}}
+          <div class="col-md-12">
+            <h6 class="text-center">No playground found</h6>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</div>

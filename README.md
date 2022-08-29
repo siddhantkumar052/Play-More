@@ -37,4 +37,3 @@ username: admin; password: Admin@123
 The result will be available at [http://localhost:3000](http://localhost:3000)
 
 
-![image](https://user-images.githubusercontent.com/63947661/187136715-00a11d51-fc92-475e-b2c7-07d446f63dff.png)

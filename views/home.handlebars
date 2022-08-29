@@ -1,0 +1,83 @@
+{{> userheader}}
+
+<section id="playgrounds" class="my-4">
+  <div class="container">
+
+    <a href="/host/allhostlist" class="btn btn-primary">Sports Watching Event</a>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Playgrounds</h1>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      {{#if playgrounds.length}}
+      {{#each playgrounds}}
+      <div class="col-md-4 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <img src="{{image}}" class="card-img-top" alt="...">
+            <h5 class="card-title">{{this.playgroundName}}</h5>
+            <p class="card-text">{{this.location}}</p>
+            <a href="/playground/{{this._id}}"
+              class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="col-md-12">
+        <h6 class="text-center">No playground found</h6>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>
+
+
+{{!-- <section id="sport-watching-events" class="my-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">Sport watching events</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+
+
+        <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            {{#each sportWatchingEvents}}
+            <button type="button" data-bs-target="#carousel{{@index}}" data-bs-slide-to="{{@index}}"
+              class="{{#if @first}}active{{/if}}" aria-label="Slide {{@index}}"></button>
+            {{/each}}
+
+          </div>
+          <div class="carousel-inner">
+            {{#each sportWatchingEvents}}
+            <div class="carousel-item {{#if @first}}active{{/if}}">
+              <img src="{{this.image}}" class="d-block w-100" alt="{{this.image}}">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{{this.playgroundName}}</h5>
+                <p>{{this.hostName}}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> --}}

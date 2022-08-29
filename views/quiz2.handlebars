@@ -1,0 +1,52 @@
+<div class="main-block mt-5">
+
+  
+  <form id="quiz" name="quiz" class="new-post-form1">
+    <h1>Quiz 2</h1>
+    <p class="questions">Which is the worlds largest football ground?</p>
+    <input type="radio" id="mc1" name="question1" value="Michigan Stadium">Michigan Stadium<br>
+    <input type="radio" id="mc11" name="question1" value="Rungrado 1st of May Stadium"> Rungrado 1st of May Stadium<br>
+    <p class="questions">Who was the youngest player to appear in the world cup?</p>
+    <input type="radio" id="mc2" name="question2" value="Norman Whiteside"> Norman Whiteside<br>
+    <input type="radio" id="mc22" name="question2" value="Amobi Okoye"> Amobi Okoye<br>
+    <p class="questions">What was the name of the first football club founded?</p>
+    <input type="radio" id="mc3" name="question3" value="Fulham F.C."> Fulham F.C.<br>
+    <input type="radio" id="mc33" name="question3" value="Sheffield"> Sheffield<br>
+    <p class="questions">Who scored the first ever Premier League goal?</p>
+    <input type="radio" id="mc4" name="question4" value="Brian Deane">Brian Deane<br>
+    <input type="radio" id="mc44" name="question4" value="Steve Ogrizovic">Steve Ogrizovic<br>
+    <p class="questions"> Who won the first Premier League title?</p>
+    <input type="radio" id="mc5" name="question5" value="Manchester United"> Manchester United<br>
+    <input type="radio" id="mc55" name="question5" value="Liverpool F.C."> Liverpool F.C.<br>
+    <p class="questions">Who was the first sponsor of the Premier League?</p>
+    <input type="radio" id="mc6" name="question6" value="Barclays ">Barclays <br>
+    <input type="radio" id="mc66" name="question6" value="Carling">Carling<br>
+    <input id="button" type="button" value="Submit" class="button1 mt-4" onclick="check();">
+  </form>
+  <div id="after_submit">
+    <p id="number_correct"></p>
+    <p id="message"></p>
+  </div>
+</div>
+
+<script>function check() {
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value;
+    var question5 = document.quiz.question5.value;
+    var question6 = document.quiz.question6.value;
+
+    var correct = 0;
+    if (question1 == "Rungrado 1st of May Stadium") { correct++; }
+    if (question2 == "Norman Whiteside") { correct++; }
+    if (question3 == "Sheffield") { correct++; }
+    if (question4 == "Brian Deane") { correct++; }
+    if (question5 == "Manchester United") { correct++; }
+    if (question6 == "Carling") { correct++; }
+    var score;
+    document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("message").innerHTML = [score];
+    document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+  }
+</script>

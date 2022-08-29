@@ -1,0 +1,29 @@
+<div class="main-block">
+    <h1 class="add_playground">{{title}}</h1>
+    <form id="login-form" method="POST" action="/playground/add" class="add-form" enctype="multipart/form-data">
+        <label for="playgroundName" class="add_form_text">Playground name: </label><br>
+        <input id="playgroundName" type="text" name="playgroundName" placeholder="Enter playground name"
+            class="full-add-width-input" /><br>
+        <label for="playgroundName" class="add_form_text">Schedule: </label><br>
+        <input id="schedule" type="text" name="schedule" placeholder="Enter schedule" class="full-add-width-input" /><br>
+        <label for="playgroundSize" class="add_form_text">Playground Size: </label><br>
+        <input id="playgroundSize" type="text" name="playgroundSize" placeholder="Enter playground size"
+            class="full-add-width-input" /><br>
+        <label for="amenities" class="add_form_text">Amenities: </label><br>
+        <input id="amenities" type="text" name="amenities" placeholder="Enter amenities" class="full-add-width-input" /><br>
+        <label for="location" class="add_form_text">Location: </label><br>
+        <input id="location" type="text" name="location" placeholder="Enter location" class="full-add-width-input" /><br>
+        <label for="location" class="add_form_text">Image: </label><br>
+        <input type="file" id="image" name="image" multiple id="input-files" class="form-control-file border" /><br>
+
+        <div class="pt-1 mb-4">
+            <button id="login-button" class="btn btn-primary add_button" type="submit">Submit</button>
+        </div>
+    </form>
+
+    <div class="error-container">
+        {{#if error}}
+        <h4>{{error}}</h4>
+        {{/if}}
+    </div>
+</div>

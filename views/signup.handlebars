@@ -1,0 +1,77 @@
+<section class="vh-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 text-black">
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                    <form class="signup_form" id="signup-form" method="POST" action="/user/signup">
+                        <h3 class="fw-normal mb-3 pb-3 signup_header" style="letter-spacing: 1px;">SIGN-UP</h3>
+                        <div class="row">
+                            <div class="form-outline">
+                                <p>Select user/host to login to account</p>
+
+                                <div class="form-check">
+                                    <label class="form-check-label" for="user">
+                                        User
+                                    </label>
+                                    <input style="margin-top: 2px;" class="form-check-input" type="radio"
+                                        name="loginradio" id="user" value="user" checked>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="host">
+                                        Host
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="loginradio" id="host"
+                                        value="host">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label signup_form_text" for="firstname">First Name</label>
+                            <input type="text" id="firstname" placeholder="Enter firstname" name="firstname"
+                                class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label signup_form_text" for="lastname">Last Name</label>
+                            <input type="text" id="lastname" placeholder="Enter lastname" name="lastname"
+                                class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label signup_form_text" for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Enter username"
+                                class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label signup_form_text" for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email-id"
+                                class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label signup_form_text" for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter password"
+                                class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label signup_form_text" for="confirm_password">Confirm Password</label>
+                            <input type="password" id="confirm_password" placeholder="Enter confirm password"
+                                name="confirm_password" class="form-control form-control-lg" />
+                        </div>
+                        {{#if error}}
+                        <div class="alert alert-danger" role="alert">
+                            {{error}}
+                        </div>
+                        {{/if}}
+                        <div class="pt-1 mb-4">
+                            <button id="sign-button" class="btn btn-primary signup_button" type="submit">Signup</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+                <div class="position-fixed">
+                    <img src="../public/images/image1.jpg" alt="Login image" class="w-100 vh-100"
+                        style="object-fit: cover; object-position: left;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

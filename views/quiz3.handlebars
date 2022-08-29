@@ -1,0 +1,51 @@
+<div class="main-block mt-5">
+
+ 
+  <form id="quiz" name="quiz" class="new-post-form1">
+     <h1>Quiz 3</h1>
+        <p class="questions">What is the highest governing body of basketball</p>
+        <input type="radio" id="mc1" name="question1" value="FIBA">FIBA<br>
+        <input type="radio" id="mc11" name="question1" value="EuroLeague">EuroLeague<br>
+        <p class="questions">When was basketball made?</p>
+        <input type="radio" id="mc2" name="question2" value="1737">1737<br>
+        <input type="radio" id="mc22" name="question2" value="1891">1891 <br>
+        <p class="questions">Which currently active NBA player has the most points?</p>
+        <input type="radio" id="mc3" name="question3" value="LeBron James">LeBron James<br>
+        <input type="radio" id="mc33" name="question3" value="Stephen Curry">Stephen Curry<br>
+        <p class="questions">Who was the tallest NBA player on the 1992 Dream Team?</p>
+        <input type="radio" id="mc4" name="question4" value="David Robinson">David Robinson<br>
+        <input type="radio" id="mc44" name="question4" value="Larry Bird">Larry Bird<br>
+        <p class="questions">Before becoming the Houston Rockets, where did the team play?</p>
+        <input type="radio" id="mc5" name="question5" value="San Diego">San Diego<br>
+        <input type="radio" id="mc55" name="question5" value="San Antonio">San Antonio<br>
+        <p class="questions">The first Coach of the Year Award was presented to?</p>
+        <input type="radio" id="mc6" name="question6" value="Steve Kerr ">Steve Kerr <br>
+        <input type="radio" id="mc66" name="question6" value="Harry Gallatin">Harry Gallatin<br>
+        <input id="button" type="button" value="Submit" class="button1 mt-4" onclick="check();">
+    </form>
+  <div id="after_submit">
+    <p id="number_correct"></p>
+    <p id="message"></p>
+  </div>
+</div>
+
+ <script>function check() { 
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value; 
+    var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value; 
+    var question5 = document.quiz.question5.value;
+    var question6 = document.quiz.question6.value;
+     
+      var correct = 0; 
+      if (question1 == "FIBA") { correct++; } 
+      if (question2 == "1891") { correct++; } 
+      if(question3 == "LeBron James") { correct++; } 
+      if(question4 == "David Robinson") { correct++; }
+      if(question5 == "San Diego") { correct++; }
+      if(question6 == "Harry Gallatin") { correct++; }
+      var score;
+      document.getElementById("after_submit").style.visibility = "visible";
+      document.getElementById("message").innerHTML = [score];
+      document.getElementById("number_correct").innerHTML = "You got " + correct  + " correct."; }
+    </script>

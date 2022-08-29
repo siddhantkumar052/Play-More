@@ -1,0 +1,63 @@
+<section id="playground-container" class="my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                
+                                <img src="{{playgrounds.image}}" class="img-fluid rounded" alt="...">
+                            </div>
+                            <div class="col-md-8 col-sm-12 align-self-end">
+                                <h5 class="card-title">{{playgrounds.playgroundName}}</h5>
+                                <p class="card-text">Location: {{playgrounds.location}}</p>
+                                <p class="card-text">Time: {{playgrounds.schedule}}</p>
+                                <p class="card-text">Size: {{playgrounds.playgroundSize}}</p>
+                                <p class="card-text">Amenities:
+                                    {{#each playgrounds.amenities}}
+                                    <span class="badge bg-info">{{this}}</span>
+                                    {{/each}}
+                                </p>
+                                <form method="POST" action="/host/createHost/{{playgrounds._id}}" class="new-post-form">
+
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+
+                                            <input type="text" id="time" name="time"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" for="time">Enter Time and Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text" id="sportsname" name="sportsname"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" for="sportsname">Sports Name</label>
+
+                                        </div>
+                                    </div>
+                                    <button id="delete-button" type="submit">Host</button>
+                                </form>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="error-container">
+                    {{#if error}}
+                    <h4>{{error}}</h4>
+                    {{/if}}
+                </div>
+                {{#if success}}
+                <div class="alert alert-success" role="alert">
+                    Successfully created Host!
+                </div>
+                {{/if}}
+
+            </div>
+        </div>
+    </div>
+</section>

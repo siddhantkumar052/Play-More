@@ -1,0 +1,32 @@
+
+<div class="main-block">
+    <h1>{{title}}</h1>
+    <form id="login-form" method="POST" action="/playground/{{playgrounds._id}}/edit" class="new-post-form">
+        <label for="playgroundName">Playground name</label>
+        <input id="playgroundName" type="text" name="playgroundName" value="{{playgrounds.playgroundName}}"
+            placeholder="Enter playground name" class="full-width-input" />
+        <label for="schedule">Schedule</label>
+        <input id="schedule" type="text" name="schedule" placeholder="Enter schedule" value="{{playgrounds.schedule}}"
+            class="full-width-input" />
+        <label for="playgroundSize">Playground Size</label>
+        <input id="playgroundSize" type="text" name="playgroundSize" value="{{playgrounds.playgroundSize}}"
+            placeholder="Enter playground size" class="full-width-input" />
+        <label for="amenities">Amenities</label>
+        <input id="amenities" type="text" name="amenities" value="{{playgrounds.amenities}}"
+            placeholder="Enter amenities" class="full-width-input" />
+        <label for="location">Location</label>
+        <input id="location" type="text" name="location" value="{{playgrounds.location}}" placeholder="Enter location"
+            class="full-width-input" />
+        {{!-- <input type="file" id="image" name="image" multiple id="input-files" class="form-control-file border" /> --}}
+
+        <button id="login-button" type="submit">Submit</button>
+    </form>
+
+    <div class="error-container">
+        {{#if error}}
+        <h4>{{error}}</h4>
+        {{/if}}
+    </div>
+
+
+</div>

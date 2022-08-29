@@ -1,0 +1,52 @@
+<div class="main-block mt-5">
+
+  
+   <form id="quiz" name="quiz" class="new-post-form1">
+     <h1>Quiz 4</h1>
+        <p class="questions"></p>Who has scored the most runs in a single First-class innings?</p>
+        <input type="radio" id="mc1" name="question1" value="Brian Lara">Brian Lara<br>
+        <input type="radio" id="mc11" name="question1" value="Sachin Tendulkar ">Sachin Tendulkar <br>
+        <p class="questions">'Dizzy' is the nickname of what Australian player?</p>
+        <input type="radio" id="mc2" name="question2" value="Jason Gillespie">Jason Gillespie<br>
+        <input type="radio" id="mc22" name="question2" value="Glenn McGrath">Glenn McGrath <br>
+        <p class="questions">Which of the following countries won the final of the triangular cricket series held in durban in februarry 1997 ?</p>
+        <input type="radio" id="mc3" name="question3" value="South africa ">South africa <br>
+        <input type="radio" id="mc33" name="question3" value="India">India<br>
+        <p class="questions">Which was the 1st non Test playing country to beat India in an international match?</p>
+        <input type="radio" id="mc4" name="question4" value="Sri Lanka">Sri Lanka<br>
+        <input type="radio" id="mc44" name="question4" value="Canada">Canada<br>
+        <p class="questions">Who is the leading wicket taker in the history of Test cricket?</p>
+        <input type="radio" id="mc5" name="question5" value="San Diego">Courtney Walsh <br>
+        <input type="radio" id="mc55" name="question5" value="Shane Warne">Shane Warne<br>
+        <p class="questions">Who was the 1st ODI captain for India?</p>
+        <input type="radio" id="mc6" name="question6" value="Ajit Wadekar">Ajit Wadekar<br>
+        <input type="radio" id="mc66" name="question6" value="Vinoo Mankad">Vinoo Mankad<br>
+        <input id="button" type="button" value="Submit" class="button1 mt-4" onclick="check();">
+    </form>
+   
+  <div id="after_submit">
+    <p id="number_correct"></p>
+    <p id="message"></p>
+  </div>
+</div>
+
+    <script>function check() { 
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value; 
+    var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value; 
+    var question5 = document.quiz.question5.value;
+    var question6 = document.quiz.question6.value;
+     
+      var correct = 0; 
+      if (question1 == "Brian Lara") { correct++; } 
+      if (question2 == "Jason Gillespie") { correct++; } 
+      if(question3 == "South africa ") { correct++; } 
+      if(question4 == "Sri Lanka") { correct++; }
+      if(question5 == "Shane Warne") { correct++; }
+      if(question6 == "Ajit Wadekar") { correct++; }
+      var score;
+      document.getElementById("after_submit").style.visibility = "visible";
+      document.getElementById("message").innerHTML = [score];
+      document.getElementById("number_correct").innerHTML = "You got " + correct  + " correct."; }
+    </script>

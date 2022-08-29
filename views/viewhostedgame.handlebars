@@ -1,0 +1,27 @@
+<div class="main-block">
+    <h1>{{title}}</h1>
+
+    <section id="join" class="my-4">
+        <div class="container">
+            <div class="row">
+                {{#if hostgamelist.length}}
+                {{#each hostgamelist}}
+                <div class="col-md-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.playgroundName}}</h5>
+                            <p class="card-text">{{this.hostName}}</p>
+                            <a href="/join/{{this._id}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                <div class="col-md-12">
+                    <h6 class="text-center">No hosted game found</h6>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </section>
+</div>
